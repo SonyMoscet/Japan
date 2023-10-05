@@ -1,0 +1,515 @@
+@import url(https://fonts.googleapis.com/css2?family=Barlow&family=Delicious+Handrawn&family=Inter:wght@400;700&family=Poppins:wght@100;200;300;600;700&display=swap);
+@import url(https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+
+}
+
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    /* background-color: #ffffff; */
+    font-family: 'Barlow', sans-serif;
+    color: #666b7f;
+    text-transform: capitalize;
+    /* background-image:url(../img/backdrop.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%; */
+}
+
+img, picture, video, canvas, svg{
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select{
+    font: inherit;
+}
+
+p,h1,h2,h3,h4,h5,h6{
+    overflow-wrap: break-word; /*pour pas que les phrase sortent d'un bloc */
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* UTILITIES */
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth; 
+}
+
+.container{
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+/* HEADER */
+
+header{
+    background-color:#fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.04);
+    padding: 2.1rem 18rem 2rem;
+    z-index: 1000;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+header nav .logo{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #000829;
+}
+
+header nav .logo span{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #e83f43;
+}
+
+header nav .menu{
+    display: flex;
+    gap: 3.2rem;
+}
+
+.menu li a{
+    display: block;
+    line-height: 7rem;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: #213442;
+    font-weight: 700;
+}
+
+.menu li a.active, .menu li a:hover{
+    color: #e83f43;
+}
+
+
+/* HERO BANNER */
+
+.hero-banner{
+    background: url('../img/hero-bkg.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #213442;
+    padding: 37.4rem;
+    height:100vh;
+    width: 100vw;
+    margin-bottom: 10rem;
+}
+
+.hero-banner .container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0.6rem;
+    width: 70%;
+    padding: 5rem;
+}
+
+.hero-banner .container h1{
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 7.6rem;
+    margin-bottom: 2rem;
+}
+
+.hero-banner .container p{
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 3.6rem;
+    text-transform: lowercase;
+    margin-bottom: 5.5rem;
+}
+
+.cta{
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 2.4rem;
+    color: #fff;
+    background-color: #e83f43;
+    border: none;
+    animation-duration: 2s;
+    /* animation-delay: 5s; */
+    animation-name: glissement;
+    animation-iteration-count: 1;
+    }
+    @keyframes glissement{
+        from{
+        margin-left: 50%;
+        width: auto;
+        }
+    
+        to{
+        margin-left: 0%;
+        width: auto;
+        }
+}
+
+.cta:hover{
+    background-color: #c53135;
+}
+
+/* CONTENT */
+
+.trip{
+    display: flex;
+    flex-wrap: wrap;
+    color: #213442;
+    margin-top: 10rem;
+    width: 70%;
+    margin: auto;
+}
+
+.trip .container h2{
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 7.6rem;
+    margin-bottom: 2rem;
+}
+
+.trip .container p{
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 3.6rem;
+    text-transform: lowercase;
+    margin-bottom: 10rem;
+}
+
+.trip .container{
+    text-align: center;
+}
+
+
+.trip .bloc_image{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 5rem;
+}
+
+.trip .media{
+    text-align: center;
+    position: relative;
+}
+
+.trip .media a{
+    position: absolute;
+    right: 3.2rem;
+    bottom: 3.2rem;
+} 
+
+.trip .media h3{
+    position: absolute;
+    right: 3.2rem;
+    bottom: 10.8rem;
+    color: #fff;
+    font-size: 3.6rem;
+    font-weight: 700;
+} 
+
+.cta{
+    border-radius: 0.3rem;
+    padding: 1.5rem 3.2rem;
+}
+
+/* Where to go */
+
+.to_go{
+    color: #213442;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.to_go .bloc_image{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 9rem;
+}
+
+.to_go .container{
+    text-align: center;
+}
+
+.to_go .container h2{
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 7.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.to_go .container p{
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 3.6rem;
+    text-transform: lowercase;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+
+.to_go .container .cta{
+    text-align: center;
+}
+
+.to_go .media{
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.to_go .media h4{
+    position: absolute;
+    bottom: 3.8rem;
+    right: 17.2rem;
+    left: 17.2rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.to_go .media p{
+    position: absolute;
+    bottom: 1.6rem;
+    right: 17.2rem;
+    left: 17.2rem;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+/* Take Care */
+
+.take_care{
+    margin-top: 20rem;
+    color: #213442;
+}
+
+.take_care .container{
+    text-align: center;
+}
+
+.take_care .container h3{
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 7.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.take_care .container p{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 7.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.take_care h4{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 7.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.take_care p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 3.6rem;
+    text-transform: lowercase;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+
+
+.take_care .bloc i{
+    color: #e83f43;
+    width: 13rem;
+    line-height: 13rem;
+    font-size: 5rem;
+    /* margin-bottom: 2rem; */
+}
+
+.take_care .bloc{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+
+/* Try to win */
+
+.to_win{
+    margin-top: 20rem;
+    color: #213442;
+}
+
+.to_win .container h3{
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 7.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.to_win .container p{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 7.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.to_win form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    gap: 2rem;
+}
+
+
+
+form input[type=submit]{
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 2.4rem;
+    color: #fff;
+    background-color: #e83f43;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+
+form input[type=email]{
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 2.4rem;
+    color: #fff;
+    background-color: #e9ebed;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+
+/* FOOTER */
+
+footer{
+    margin-top: 10rem;
+    background-color: #000829;
+    padding: 3.3rem 3.3rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+/* MEDIA QUERIES */
+
+
+/* Petit ecran */
+
+@media(max-width: 599px){
+    header{
+        display: none;
+    }
+
+    .hero-banner{
+        display:flex;
+        align-content: center;
+        padding: 4rem 0 4rem;
+    }
+
+    .hero-banner h1{
+        display: flex;
+        font-size: 4.8rem;
+        flex-wrap: wrap;
+    }
+
+    .hero-banner p{
+        display: flex;
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+
+    h4 h3 h2{
+        font-size: 2rem;
+    }
+}
+
+
+@media(max-width: 900px){
+    header{
+        display: none;
+    }
+}
+
+@media(max-width: 1200px){
+    
+
+    .hero-banner{
+        display:flex;
+        align-content: center;
+        padding: 4rem 0 4rem;
+    }
+
+    .hero-banner h1{
+        display: flex;
+        font-size: 4.8rem;
+        flex-wrap: wrap;
+    }
+
+    .hero-banner p{
+        display: flex;
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+
+
+    
+}
